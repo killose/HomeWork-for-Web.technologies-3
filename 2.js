@@ -6,7 +6,7 @@
 // Необходимо у пользователя запросить имя и вызвать функцию greeting, передав туда данное значение.
 
 function greeting(name) {
-    return console.log(`Приветствую Вас ${userName}!`);
+    console.log(`Приветствую Вас ${name}!`);
 }
 
 function getName() {

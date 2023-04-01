@@ -16,14 +16,19 @@ function getTemperCelsius() {
 
 function conversionToFahrenheit(tempCelsius) {
     //   return +((9 / 5) * tempCelsius + 32).toFixed(1); // так тоже работает.
-    return Math.floor(((9 / 5) * tempCelsius + 32) * 10) / 10;
+    return (9 / 5) * tempCelsius + 32
 }
 
 function showMessage(numFahrenheit, numCelsius) {
     alert(`Задано градусов по Цельсию: ${numCelsius} по Фаренгейту: ${numFahrenheit}`);
 }
 
+function roundingToTwoChar(temperature) {
+    return Math.floor(temperature * 10) / 10;
+}
+
 const temperatureCelsius = getTemperCelsius();
 const temperatureFahrenheit = conversionToFahrenheit(temperatureCelsius);
+const rounding = roundingToTwoChar(temperatureFahrenheit);
 
-showMessage(temperatureFahrenheit, temperatureCelsius);
+showMessage(rounding, temperatureCelsius);
